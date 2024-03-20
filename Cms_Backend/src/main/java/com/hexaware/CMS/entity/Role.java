@@ -1,0 +1,72 @@
+package com.hexaware.CMS.entity;
+
+import java.util.Objects;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "roles")
+public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+	public Role() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Role(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	public Role(String roleName) {
+        this.name = roleName;
+    }
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+	        return true;
+	    }
+	    
+	    // Check if the object is null or not an instance of Role
+	    if (obj == null || getClass() != obj.getClass()) {
+	        return false;
+	    }
+
+	    // Cast the object to Role
+	    Role role=(Role)obj;
+	    
+	    // Compare the names ignoring case
+	    return name.equalsIgnoreCase(role.getName());			
+	}
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", name=" + name + "]";
+	}
+	
+	
+}

@@ -1,0 +1,47 @@
+.HomeImageContainer
+{
+    margin-top: 3.5%;
+    height: 70vh; 
+     
+}
+
+/* .HomeImageContainer img{
+object-fit:fill
+} */
+
+.col-xl-3
+{
+    display: flex;
+    flex-direction: column;
+ 
+    
+}
+
+.center
+{
+    display: flex;
+    
+    align-self: center;
+    flex-direction: column;
+    
+}
+
+ .row
+ {
+justify-content:center ;
+ }
+
+.CrimeImage{
+border: solid;
+align-self: center;
+}
+
+.Register
+{
+    display: flex;
+    justify-content: center;
+}
+.About
+{
+    background-color: #50C4ED;
+}
